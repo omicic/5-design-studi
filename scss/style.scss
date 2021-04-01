@@ -359,5 +359,22 @@ nav {
 
         }
     }
+}
 
+.projects {
+    @extend .team;
+
+    article:nth-child(2) {
+
+        img {
+            flex: 0 0 100%;
+            border-radius: 0%;
+            padding: 50px;
+        }
+    }
+}
+
+.carousel {
+
+    background: $secondary;
 }

@@ -281,7 +281,7 @@ nav div ul li a:hover {
   font-weight: 500;
 }
 
-.team {
+.team, .projects {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -289,19 +289,19 @@ nav div ul li a:hover {
   flex-wrap: wrap;
   padding: 50px auto;
 }
-.team article:nth-child(1) {
+.team article:nth-child(1), .projects article:nth-child(1) {
   flex: 0 0 48%;
 }
-.team article:nth-child(1) h2 {
+.team article:nth-child(1) h2, .projects article:nth-child(1) h2 {
   font-size: 2.5rem;
 }
-.team article:nth-child(1) hr {
+.team article:nth-child(1) hr, .projects article:nth-child(1) hr {
   margin-bottom: 20px;
 }
-.team article:nth-child(1) p {
+.team article:nth-child(1) p, .projects article:nth-child(1) p {
   padding-top: 10px;
 }
-.team article:nth-child(2) {
+.team article:nth-child(2), .projects article:nth-child(2) {
   flex: 0 0 48%;
   display: flex;
   justify-content: space-between;
@@ -309,10 +309,20 @@ nav div ul li a:hover {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.team article:nth-child(2) img {
+.team article:nth-child(2) img, .projects article:nth-child(2) img {
   flex: 0 0 45%;
   border: none;
   border-radius: 50%;
   width: 100%;
   padding: 30px 10px;
+}
+
+.projects article:nth-child(2) img {
+  flex: 0 0 100%;
+  border-radius: 0%;
+  padding: 50px;
+}
+
+.carousel {
+  background: #f1c50e;
 }/*# sourceMappingURL=style.css.map */

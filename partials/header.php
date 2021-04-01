@@ -12,14 +12,13 @@
 </head>
 
 <body>
-
     <nav>
         <div class="container">
             <a href="index.php">Creative</a>
             <ul>
                 <li><a href="index.php">home</a></li>
                 <li><a href="team.php">team</a></li>
-                <li><a href="index.php">projects</a></li>
+                <li><a href="projects.php">projects</a></li>
             </ul>
         </div>
     </nav>
