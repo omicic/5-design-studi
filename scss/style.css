@@ -29,6 +29,12 @@ h3,
 h4,
 h5 {
   color: #7c57b4;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 ul {
@@ -39,6 +45,17 @@ a {
   text-decoration: none;
 }
 
+hr {
+  color: #7c57b4;
+  width: 5%;
+  margin: 10px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /***header***/
 header {
   background-image: url(../img/header.jpg);
@@ -46,41 +63,256 @@ header {
   background-size: cover;
   height: 80vh;
 }
-header nav {
-  background: #7c57b4;
-  padding: 0 50px;
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  background: #7c57b4;
 }
-header nav h1 {
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px auto;
+}
+nav div a {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: 0.4s ease;
+}
+nav div a:hover {
+  color: #f1c50e;
+}
+nav div ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+}
+nav div ul li {
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+nav div ul li a {
+  color: #fff;
+  transition: 0.4s ease;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+nav div ul li a:hover {
+  color: #f1c50e;
+}
+
+/***mainHeader***/
+.mainHeader {
+  background: #7c57b4;
+  margin: auto;
+  width: 50%;
+  padding: 30px 50px;
+  margin-top: -100px;
+  text-align: center;
+  line-height: 1.2;
+}
+.mainHeader h1 {
+  color: #f1c50e;
+  font-size: 8rem;
+  font-family: "Anton", sans-serif;
+  text-shadow: 3px 3px #4c3372;
+}
+.mainHeader h3 {
+  color: #fdf9f6;
+  font-size: 3rem;
+}
+.mainHeader p {
+  color: #fdf9f6;
+  font-style: #fdf9f6;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/***Services***/
+.services article:nth-child(1) {
+  text-align: left;
+  padding-top: 70px;
+}
+.services article:nth-child(1) h3 {
+  color: #7c57b4;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.services article:nth-child(1) p {
+  font-size: 1rem;
+}
+.services article:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  height: 40vh;
+}
+.services article:nth-child(2) .prvi, .services article:nth-child(2) .treci, .services article:nth-child(2) .drugi {
+  flex: 0 0 30%;
+  align-self: flex-start;
+  background: #7c57b4;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+}
+.services article:nth-child(2) .prvi h4, .services article:nth-child(2) .treci h4, .services article:nth-child(2) .drugi h4 {
   font-size: 1.5rem;
   color: #fff;
+  padding: 10px 0;
+}
+.services article:nth-child(2) .prvi .fa-laptop-code, .services article:nth-child(2) .treci .fa-laptop-code, .services article:nth-child(2) .drugi .fa-laptop-code {
+  font-size: 2rem;
+}
+.services article:nth-child(2) .prvi a, .services article:nth-child(2) .treci a, .services article:nth-child(2) .drugi a {
+  padding-top: 30px;
+  font-size: 1.2rem;
+  color: #fff;
   transition: 0.4s ease;
 }
-header nav h1:hover {
+.services article:nth-child(2) .prvi a:hover, .services article:nth-child(2) .treci a:hover, .services article:nth-child(2) .drugi a:hover {
   color: #f1c50e;
 }
-header nav ul {
+.services article:nth-child(2) .drugi {
+  align-self: center;
+  background: #f1c50e;
+}
+.services article:nth-child(2) .drugi a:hover {
+  color: #7c57b4;
+}
+.services article:nth-child(2) .drugi .fa-bullhorn {
+  font-size: 2rem;
+}
+.services article:nth-child(2) .treci {
+  align-self: flex-end;
+  background: #fff;
+  color: #7c57b4;
+}
+.services article:nth-child(2) .treci h4 {
+  color: #7c57b4;
+}
+.services article:nth-child(2) .treci a {
+  transition: 0.4s ease;
+  color: #7c57b4;
+}
+.services article:nth-child(2) .treci a a:hover {
+  color: #f1c50e;
+}
+.services article:nth-child(2) .treci .fa-wordpress-simple {
+  font-size: 2rem;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #7c57b4;
+  padding: 70px;
+  color: #fff;
+  margin: 50px auto;
+}
+.about article:nth-child(1) {
+  flex: 0 0 60%;
+}
+.about article:nth-child(1) h3 {
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.about article:nth-child(2) {
+  flex: 0 0 15%;
+}
+.about article:nth-child(2) h3 {
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.about article:nth-child(2) .fas {
+  color: #f1c50e;
+}
+.about article:nth-child(3) {
+  flex: 0 0 15%;
+}
+.about article:nth-child(3) h3 {
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.about article:nth-child(3) .fab {
+  font-size: 2rem;
+  margin-right: 20px;
+  color: #f1c50e;
+}
+
+/***solution***/
+.solution {
+  background-image: none;
+  background: #f1c50e;
+  color: #7c57b4;
+  text-align: center;
+  padding: 50px auto;
+}
+.solution h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 30px auto;
+}
+.solution p {
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.team {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #fff;
+  padding: 50px auto;
 }
-header nav ul li {
-  margin-left: 20px;
-  text-transform: uppercase;
+.team article:nth-child(1) {
+  flex: 0 0 48%;
 }
-header nav ul li a {
-  color: #fff;
-  transition: 0.4s ease;
+.team article:nth-child(1) h2 {
+  font-size: 2.5rem;
 }
-header nav ul li a:hover {
-  color: #f1c50e;
+.team article:nth-child(1) hr {
+  margin-bottom: 20px;
+}
+.team article:nth-child(1) p {
+  padding-top: 10px;
+}
+.team article:nth-child(2) {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team article:nth-child(2) img {
+  flex: 0 0 45%;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  padding: 30px 10px;
 }/*# sourceMappingURL=style.css.map */

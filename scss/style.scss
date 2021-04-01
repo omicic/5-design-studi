@@ -42,7 +42,6 @@ body {
     background: $lightGray;
     color: darken($primary, 20%);
     letter-spacing: 1px;
-    ;
 }
 
 h1,
@@ -51,6 +50,12 @@ h3,
 h4,
 h5 {
     color: $primary;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 ul {
@@ -61,6 +66,16 @@ a {
     text-decoration: none;
 }
 
+hr {
+    color: $primary;
+    width: 5%;
+    margin: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 
 /***header***/
 header {
@@ -68,16 +83,21 @@ header {
     background-position: center;
     background-size: cover;
     height: 80vh;
+}
 
-    nav {
-        background: $primary;
-        padding: 0 50px;
+nav {
+    @include flex(space-between, center, row, wrap);
+    background: $primary;
+
+
+    div {
         @include flex(space-between, center, row, wrap);
+        padding: 30px auto;
 
-        h1 {
+        a {
             text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1.5rem;
+            font-weight: 800;
+            font-size: 1.8rem;
             color: $white;
             transition: $transition;
 
@@ -91,11 +111,98 @@ header {
             color: $white;
 
             li {
-                margin-left: 20px;
+                margin-left: 30px;
                 text-transform: uppercase;
             }
 
             li a {
+                color: $white;
+                transition: $transition;
+                font-size: 1.4rem;
+                font-weight: 600;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+
+/***mainHeader***/
+.mainHeader {
+    background: $primary;
+    margin: auto;
+    width: 50%;
+    padding: 30px 50px;
+    margin-top: -100px;
+    text-align: center;
+    line-height: 1.2;
+
+    h1 {
+        color: $secondary;
+        font-size: 8rem;
+        font-family: $headings;
+        text-shadow: 3px 3px darken($color: $primary, $amount: 20%);
+    }
+
+    h3 {
+        color: $lightGray;
+        font-size: 3rem;
+    }
+
+    p {
+        color: $lightGray;
+        font-style: $lightGray;
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+}
+
+/***Services***/
+.services {
+    article:nth-child(1) {
+        text-align: left;
+        padding-top: 70px;
+
+        h3 {
+            color: $primary;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    article:nth-child(2) {
+        @include flex(space-between, flex-start, row, wrap);
+        padding-top: 40px;
+        height: 40vh;
+
+        .prvi {
+            flex: 0 0 30%;
+            align-self: flex-start;
+            background: $primary;
+            color: $white;
+            @include flex(space-between, flex-start, column, wrap);
+            padding: 20px 30px;
+
+            h4 {
+                font-size: 1.5rem;
+                color: $white;
+                padding: 10px 0;
+            }
+
+            .fa-laptop-code {
+                font-size: 2rem;
+            }
+
+            a {
+                padding-top: 30px;
+                font-size: 1.2rem;
                 color: $white;
                 transition: $transition;
 
@@ -103,9 +210,154 @@ header {
                     color: $secondary;
                 }
             }
-
         }
 
+        .drugi {
+            @extend .prvi;
+            align-self: center;
+            background: $secondary;
 
+            a {
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .fa-bullhorn {
+                font-size: 2rem;
+            }
+        }
+
+        .treci {
+            @extend .prvi;
+            align-self: flex-end;
+            background: $white;
+            color: $primary;
+
+            h4 {
+                color: $primary;
+            }
+
+            a {
+                transition: $transition;
+                color: $primary;
+
+                a:hover {
+                    color: $secondary;
+                }
+            }
+
+            .fa-wordpress-simple {
+                font-size: 2rem;
+            }
+        }
     }
+}
+
+.about {
+    @include flex(space-between, flex-start, row, wrap);
+    background: $primary;
+    padding: 70px;
+    color: $white;
+    margin: 50px auto;
+
+    article:nth-child(1) {
+        flex: 0 0 60%;
+
+        h3 {
+            font-size: 2rem;
+            color: $white;
+            padding-bottom: 20px;
+        }
+    }
+
+    article:nth-child(2) {
+
+        flex: 0 0 15%;
+
+        h3 {
+            font-size: 2rem;
+            color: $white;
+            padding-bottom: 20px;
+        }
+
+        .fas {
+            color: $secondary;
+        }
+    }
+
+    article:nth-child(3) {
+        flex: 0 0 15%;
+
+        h3 {
+            font-size: 2rem;
+            color: $white;
+            padding-bottom: 20px;
+        }
+
+        .fab {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: $secondary;
+        }
+    }
+
+}
+
+/***solution***/
+.solution {
+    background-image: none;
+    background: $secondary;
+    color: $primary;
+    text-align: center;
+    padding: 50px auto;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 30px auto;
+    }
+
+    p {
+        padding-bottom: 10px;
+        font-weight: 500;
+    }
+
+}
+
+.team {
+    @include flex(space-between, center, row, wrap);
+    padding: 50px auto;
+
+    article:nth-child(1) {
+        flex: 0 0 48%;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        hr {
+            margin-bottom: 20px;
+        }
+
+        p {
+            padding-top: 10px;
+            ;
+        }
+    }
+
+    article:nth-child(2) {
+        flex: 0 0 48%;
+        @include flex(space-between, center, row, wrap);
+
+        img {
+            flex: 0 0 45%;
+            border: none;
+            border-radius: 50%;
+            width: 100%;
+            padding: 30px 10px;
+
+        }
+    }
+
 }

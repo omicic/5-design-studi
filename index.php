@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'partials/header.php'?>
+<header></header>
+<section class="mainHeader">
+    <h1>Creative</h1>
+    <h3>Design Studio</h3>
+    <p>Web & Graphic design</p>
+</section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design studio</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="scss/style.css">
-</head>
-
-<body>
-
-    <header>
-        <nav>
-            <h1>Creative</h1>
-            <ul>
-                <li><a href="index.php">home</a></li>
-                <li><a href="index.php">team</a></li>
-                <li><a href="index.php">projects</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+<section class="services container">
+    <article>
+        <h3>Services</h3>
+        <hr>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Ullam atque sint reprehenderit sed
+            molestiae
+            nulla porro expedita autem, placeat ducimus?</p>
+    </article>
+    <article>
+        <div class="prvi">
+            <i class="fas fa-laptop-code"></i>
+            <h4>Web development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat temporibus repellendus quod odit.
+            </p>
+            <a href="">learn more&nbsp;<i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="drugi">
+            <i class="fas fa-bullhorn"></i>
+            <h4>Web development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat temporibus repellendus quod odit.
+            </p>
+            <a href="">learn more&nbsp;<i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="treci">
+            <i class="fab fa-wordpress-simple"></i>
+            <h4>Web development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat temporibus repellendus quod odit.
+            </p>
+            <a href="">learn more&nbsp;<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </article>
+</section>
